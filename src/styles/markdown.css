@@ -110,6 +110,10 @@
             @apply content-none;
         }
 
+        p {
+            opacity: 0.5;
+        }
+
     }
 
     .katex-display-container {

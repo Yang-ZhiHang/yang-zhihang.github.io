@@ -1,3 +1,3 @@
 # 关于
 
-::github{repo="yang-zhihang/xiaozhi-webui"}
+这里什么都没有...
