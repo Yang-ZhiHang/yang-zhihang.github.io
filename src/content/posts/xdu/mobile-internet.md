@@ -1,5 +1,5 @@
 ---
-title: 西电移动互联网导论（一）
+title: 西电移动互联网导论 - FileDownloader
 published: 2025-09-11
 updated: 2025-09-11
 image: ''
@@ -8,7 +8,7 @@ category: 'XDU'
 draft: false 
 ---
 
-# FileDownloader
+# 前言
 
 本程序是移动互联网导论的一次小作业，需要使用 TS+Node.js 实现一个简易下载器。
 
@@ -20,7 +20,13 @@ filedownloader <url> <outputFile>
 
 在项目开始前，请确保你已经安装了 Node.js。
 
-我在本项目中使用的包管理器是 [pnpm](https://pnpm.io/zh/)，如果你还没有安装 pnpm，可以使用 npm/npx 或参考 pnpm 官网的[安装指南](https://pnpm.io/zh/installation)进行安装。
+我在本项目中使用的包管理器是 [pnpm](https://pnpm.io/zh/)，如果你还没有安装 `pnpm`，可以使用 `npm`/`npx` 或参考 `pnpm` 官网的[安装指南](https://pnpm.io/zh/installation)进行安装。
+
+想直接看源代码请移步 `Github`：
+
+::github{repo="Yang-ZhiHang/file-downloader"}
+
+# 开始
 
 ## 配置文件
 
@@ -136,15 +142,11 @@ pnpm link
 
 既然我们要实现命令行下载器，那么我们就需要解析命令行参数。
 
-为什么需要解析命令行参数呢？
-
+:::note[为什么需要解析命令行参数呢？]
 想想，你写的 `filedownloader` 不仅仅是给自己用的，你也希望给别人用（~老师用的时候程序不崩掉~）。
-
-如果用户输入的是：`filedownloader abc ababa`
-
-你就需要告诉用户 `abc` 不是一个合法的 URL。
-
+如果用户输入的是：`filedownloader abc ababa`，你就需要告诉用户 `abc` 不是一个合法的 URL。
 所以我们需要一个解析模块来帮助我们解析命令行参数。
+:::
 
 对于第一个参数 URL，我们可以使用正则表达式来进行简单的验证：
 
@@ -174,9 +176,9 @@ if (!outputPattern.test(outputPath)) {
 
 自己通过代码下载一个文件，Uh..🤔
 
-如果你写过 `AI+前端` 应该会了解到 fetch API，毕竟为了实现大模型的流式输出，我们需要使用它来对内容进行流式处理。
+如果你写过 `AI+前端` 应该会了解到 `fetch` API，毕竟为了实现大模型的流式输出，我们需要使用它来对内容进行流式处理。
 
-回到 `node` 环境，如果你忘了或者不会使用 `fetch`（我也忘了），可以移步 [Node.js 官方文档](https://nodejs.org/en/learn/getting-started/fetch)。
+回到 `node` 环境，如果你忘了或者不会使用 `fetch`，可以移步 [Node.js 官方文档](https://nodejs.org/en/learn/getting-started/fetch)。
 
 在 `fetch` 官方文档的 `use pool with Undici` 部分，我们可以看到 `fetch` 对文件流的处理方式：
 
@@ -205,8 +207,6 @@ fileStream.end();
 
 更新进度条的具体逻辑部分靠你们发挥自己的想象力了，想要怎样的效果自己问 AI 找方案去实现就好了~
 
-源码暂不开放，等我交完作业再说~
-
-## 写在最后
+# 写在最后
 
 移动互联网导论老师挺好的，上课主要给我们讲大框架的一些认知，具体细节需要课下自学，作业也挺有趣的，能学到东西，不亏~
