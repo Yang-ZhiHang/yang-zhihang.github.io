@@ -18,5 +18,8 @@
     "quickfix.biome": "always",
     "source.organizeImports.biome": "always"
   },
-  "frontMatter.dashboard.openOnStart": false
+  "frontMatter.dashboard.openOnStart": false,
+  "editor.suggest.showSnippets": true,
+  "editor.snippetSuggestions": "top",
+  "css.lint.unknownAtRules":"ignore"
 }

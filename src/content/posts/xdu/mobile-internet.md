@@ -3,16 +3,14 @@ title: 西电移动互联网导论 - FileDownloader
 published: 2025-09-11
 updated: 2025-09-11
 image: ''
-tags: [西电, 移动互联网导论]
-category: 'XDU'
+tags: [西电-移动互联网导论, Typescript, Node.js]
+category: 'Course'
 draft: false 
 ---
 
 # 前言
 
-本程序是移动互联网导论的一次小作业，需要使用 TS+Node.js 实现一个简易下载器。
-
-下载器的使用方式如下：
+本程序是移动互联网导论的一次小作业，需要使用 TS+Node.js 实现一个简易下载器。下载器的使用方式如下：
 
 ```cmd
 filedownloader <url> <outputFile>
@@ -22,9 +20,7 @@ filedownloader <url> <outputFile>
 
 我在本项目中使用的包管理器是 [pnpm](https://pnpm.io/zh/)，如果你还没有安装 `pnpm`，可以使用 `npm`/`npx` 或参考 `pnpm` 官网的[安装指南](https://pnpm.io/zh/installation)进行安装。
 
-想直接看源代码请移步 `Github`：
-
-::github{repo="Yang-ZhiHang/file-downloader"}
+想直接看源代码请移步 [Github](https://github.com/Yang-ZhiHang/file-downloader)。
 
 # 开始
 

@@ -4,8 +4,8 @@ published: 2025-09-10
 updated: 2025-09-10
 description: '对西电计组课程设计的思路和理解'
 image: ''
-tags: [西电, 计组]
-category: 'XDU'
+tags: [西电-计组课设]
+category: 'Course'
 draft: false 
 ---
 
@@ -79,7 +79,7 @@ S       | M=0 (Mathmatical)                          | M=1 (Logical)
 
 我们先来看一下实验手册中给出的微指令流程图：
 
-![](./xdu-coa-flow.webp)
+![](./images/xdu-coa-flow-chart.webp)
 
 可以看到左侧的 `运行微程序` 部分当中，指令会先被送入 `IR` 指令寄存器，然后进行解析得出 `P[1]` 信号，根据 `P[1]` 电路可以判断指令应该跳到地址进行下一步数据的读取。
 
@@ -97,7 +97,7 @@ S       | M=0 (Mathmatical)                          | M=1 (Logical)
 
 这些微操作我们通过数据通路框图来推理：
 
-![](./xdu-coa-frame.webp)
+![](./images/xdu-coa-frame.webp)
 
 `ADD` 指令需要 5 条微指令来完成，概括就是取值+操作。
 
@@ -134,6 +134,6 @@ S       | M=0 (Mathmatical)                          | M=1 (Logical)
 
 下面是我的计组课设流程图，仅供参考：
 
-![](./coa-flow_micro.webp)
+![](./images/flow-chart.webp)
 
 绘图工具: `mermaid`

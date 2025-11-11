@@ -29,3 +29,7 @@ yarn.lock
 # ide
 .idea
 *.iml
+
+# excalidraw
+**/charts
+*.excalidraw
