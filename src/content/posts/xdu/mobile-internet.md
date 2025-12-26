@@ -3,7 +3,7 @@ title: 西电移动互联网导论 - FileDownloader
 published: 2025-09-11
 updated: 2025-09-11
 image: ''
-tags: [西电-移动互联网导论, Typescript, Node.js]
+tags: [西电, 移动互联网导论, Typescript, Node.js]
 category: 'Course'
 draft: false 
 ---

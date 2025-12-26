@@ -4,7 +4,7 @@ published: 2025-09-10
 updated: 2025-09-10
 description: '对西电计组课程设计的思路和理解'
 image: ''
-tags: [西电-计组课设]
+tags: [西电, 计组课设]
 category: 'Course'
 draft: false 
 ---

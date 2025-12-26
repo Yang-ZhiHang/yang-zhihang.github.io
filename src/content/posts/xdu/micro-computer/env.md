@@ -2,7 +2,7 @@
 title: 西电微机原理实验 - 环境配置
 published: 2025-10-03
 image: ''
-tags: [西电-微机原理]
+tags: [西电, 微机原理]
 category: 'Course'
 draft: false 
 lang: ''

@@ -3,7 +3,7 @@ title: 缓冲区溢出攻击
 published: 2025-10-21
 description: '西电《计算机安全导论》实验：64 位 WSL 下栈溢出复现与 shellcode 注入，含完整 exp 与 GDB 调试过程解析'
 image: ''
-tags: [西电-计算机安全导论, Security]
+tags: [西电, 计算机安全导论, Security]
 category: 'Course'
 draft: false
 lang: 'zh-CN'
@@ -265,7 +265,9 @@ A: Windows 系统由于更加靠近用户端，所以系统调用号并不公开
 
 现在，我们已经有了恶意程序的汇编代码，如何转换为二进制文件呢？
 
-这里推荐使用[在线转换器](https://defuse.ca/online-x86-assembler.htm)，不过如果你想要了解具体的汇编过程，可以查阅 **x86 架构指令集参考手册**[^x86_reference]
+这里推荐使用[在线转换器](https://defuse.ca/online-x86-assembler.htm)。
+
+当然！如果你对原理充满热情！想要了解指令-机器码的具体对应关系，然后花上一个下午手搓机器码，可以查阅 **x86 架构指令集参考手册**[^x86_reference]。在查阅过程中，为了避免来回翻找的麻烦，推荐一个网站：[x86 and amd64 instruction reference](https://www.felixcloutier.com/x86/)，在 url 后面输入你要查阅的指令跳转到对应的页面即可。
 
 [^x86_reference]: Intel64 And IA-32 Architectures Software Developer's Manual Volume 2 (2A, 2B, 2C & 2D): Instruction Set Reference, A-Z.
 
@@ -284,3 +286,5 @@ shellcode = (
     "\x0f\x05"                 # syscall
 ).encode('latin-1')
 ```
+
+到这里，我们的恶意程序就实现完成了！
