@@ -3,7 +3,7 @@ title: 双目视图测图像深度
 published: 2025-12-27
 description: '相似三角形大家肯定都懂，但是右下角那段线段的长度为什么是 X_R 呢？其实很简单，只要我们将整个图像以点 O 的中心对称图画出来就行了，如下图所示：'
 image: ''
-tags: [西电, 计算机视觉，CV]
+tags: [西电, 计算机视觉, CV]
 category: 'Course'
 draft: false 
 lang: ''
@@ -41,3 +41,10 @@ lang: ''
 得 $Z = \frac{f \cdot B}{X_R - X_T}$
 
 证毕。
+
+
+:::note[2026 年 1 月 5 日]
+
+乐，没想到考试直接考了这道题的证明，我库库写~
+
+:::

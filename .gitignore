@@ -30,6 +30,7 @@ yarn.lock
 .idea
 *.iml
 
-# excalidraw
+# figures
 **/charts
-*.excalidraw
+**/*.excalidraw
+**/*.ggb
