@@ -1,9 +1,9 @@
 ---
-title: 图形学：阴影失真（Shadow Acne）
+title: 图形学：Shadow Acne
 published: 2025-12-26
 description: ''
 image: './images/sphere_simple_emph.jpg'
-tags: [计算机图形学, 路径追踪, Shadow Acne]
+tags: [计算机图形学, 路径追踪, 阴影失真, Shadow Acne]
 category: 'Graphics'
 draft: false 
 lang: ''

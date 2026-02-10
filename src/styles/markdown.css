@@ -110,7 +110,8 @@
             @apply content-none;
         }
 
-        p {
+        /* p 为段落文字，span 为公式，ol/ul 为列表 */
+        p, span.katex-display, ol, ul {
             opacity: 0.65;
         }
 

@@ -32,5 +32,6 @@ yarn.lock
 
 # figures
 **/charts
-**/*.excalidraw
-**/*.ggb
+*.excalidraw
+*.ggb
+*.psd
