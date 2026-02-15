@@ -109,7 +109,7 @@ S       | M=0 (Mathmatical)                          | M=1 (Logical)
 
 > 这里 `--top` 是因为栈顶指针是从高地址向低地址增长的。
 
-所以 `PUSHI` 指令的微操作大概可以描述为：
+所以输入值入栈的指令 `PUSHI` 的微操作大概可以描述为：
 
 1. 保存栈顶指针
 2. 将输入的值存入 `RAM[栈顶指针]`
@@ -132,8 +132,8 @@ S       | M=0 (Mathmatical)                          | M=1 (Logical)
 
 了解了 `PUSH` 指令的微操作框架之后，后续的指令微操作就很好设计了，也是类似的。
 
-下面是我的计组课设流程图，仅供参考：
+下面是我的计组课设流程图，包含初始化 `INIT`、输入值入栈 `PUSHI`、出栈 `POP`、寄存器值入栈 `PUSHR`、查看栈顶元素 `TOP`。仅供参考：
 
-![](./images/flow-chart.webp)
+![Flow chart of curriculumn design](./images/flow-chart.webp)
 
 绘图工具: `mermaid`
