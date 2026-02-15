@@ -2,6 +2,7 @@
 title: 图形学：PDF
 published: 2026-01-22
 description: ''
+image: './images/pdf_scatter.jpg'
 tags: [计算机图形学, 路径追踪, PDF, 概率密度函数]
 category: 'Graphics'
 draft: false 
@@ -83,13 +84,15 @@ PDF 的英文全拼是 Probability Density Function，意思为概率密度函�
 
 这涉及到了 Monte Carlo 采样中的一个重要概念：逆变换采样（Inverse Transform Sampling）。通过逆变换采样，我们可以将均匀分布的随机数转换为符合我们需要的 PDF 分布的随机数。
 
-此处我们只讲述大致的步骤。
+此处我们只讲述大致的步骤，具体实现可以参考笔者的开源项目👉[github/path-tracing-renderer](https://github.com/Yang-ZhiHang/path-tracing-renderer)。
 
-1. 我们需要知道概率密度函数与空间之间的关系。比如说我们现在要求解一个光线打到表面上时，反射光线在半球表面的分布。根据 Lambert's Cosine Law，我们设 $PDF=C \cdot cos\theta$。这个系数是为了让 PDF 在这个空间的积分结果为 1。通过这一点我们就可以求出 PDF 的解析式了；
+1. 我们需要知道概率密度函数与空间之间的关系。比如说我们现在要求解一个光线打到表面上时，反射光线在半球表面的分布。根据 Lambert's Cosine Law，我们设 $PDF=C \cdot cos\theta$。这个系数 $C$ 是为了让 PDF 在这个空间的积分结果为 1。通过这一点我们就可以求出 PDF 的解析式了；
 
 2. 对 PDF 进行积分求出 CDF。CDF 本质上建立了从样本空间（如角度）到 `[0, 1)` 区间的映射关系。
 
 3. 对 CDF 求逆函数，得到从 `[0, 1)` 区间到样本空间的映射。最后我们就可以通过「计算机极易实现的伪随机数生成器」来生成一个符合 PDF 分布的随机样本。
+
+![Uniform distribution to PDF distribution](./images/random_to_pdf_distribution.jpg)
 
 通过上述步骤，我们就可以实现从 `[0, 1)` 均匀分布到 PDF 分布的采样过程，从而在路径追踪中对光线进行有效的采样与加权修正，使渲染结果更加逼真。而 PDF 在这个过程中为 Monte Carlo 算法提供了先验分布的采样依据。
 
