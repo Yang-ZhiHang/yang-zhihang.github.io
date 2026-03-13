@@ -2,7 +2,7 @@
 title: 图形学：Monte Carlo
 published: 2026-02-03
 description: ''
-tags: [计算机图形学, 路径追踪, 蒙特卡洛, Monte Carlo]
+tags: [图形学, 蒙特卡洛, Monte Carlo]
 category: 'Graphics'
 draft: false 
 lang: ''
@@ -34,7 +34,7 @@ $$
 \int_A f(x, y) dA \approx \frac{1}{N} \sum_{i=1}^{N} \frac{f(x_i, y_i)}{PDF(x_i, y_i)}
 $$
 
-这是因为通常我们的积分域内采样的权重是不一样的，所以说我们需要通过一个函数来描述积分域内不同区域的采样权重，那么就需要引入 [PDF](https://yang-zhihang.github.io/posts/computer-graphics/pdf/)。有了 PDF 之后，我们就可以通过重要性采样使蒙特卡洛采样更快地收敛到我们想要的结果：降低方差，从而让画面在更少的采样数量下更快收敛且画面更干净。
+这是因为通常我们的积分域内采样的权重是不一样的，所以说我们需要通过一个函数来描述积分域内不同区域的采样权重，那么就需要引入 [PDF](https://yang-zhihang.github.io/posts/graphics/pdf/)。有了 PDF 之后，我们就可以通过重要性采样使蒙特卡洛采样更快地收敛到我们想要的结果：降低方差，从而让画面在更少的采样数量下更快收敛且画面更干净。
 
 :::
 
