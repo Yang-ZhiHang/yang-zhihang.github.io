@@ -267,7 +267,18 @@ A: Windows 系统由于更加靠近用户端，所以系统调用号并不公开
 
 这里推荐使用[在线转换器](https://defuse.ca/online-x86-assembler.htm)。
 
-当然！如果你对原理充满热情！想要了解指令-机器码的具体对应关系，然后花上一个下午手搓机器码，可以查阅 **x86 架构指令集参考手册**[^x86_reference]。在查阅过程中，为了避免来回翻找的麻烦，推荐一个网站：[x86 and amd64 instruction reference](https://www.felixcloutier.com/x86/)，在 url 后面输入你要查阅的指令跳转到对应的页面即可。
+当然！如果你对这个转换过程充满热情！想要了解指令-机器码的具体对应关系，然后花上一个下午手搓机器码，可以查阅 **x86 架构指令集参考手册**[^x86_reference]，并得到：
+
+| OPCODE            | Instruction    | Description                                       |
+| ----------------- | -------------- | ------------------------------------------------- |
+| 50 + rd           | PUSH r64       | Push r64.                                         |
+| REX.W + 33 /r     | XOR r64, r/m64 | r64 XOR r/m64.                                    |
+| REX.W + 8B /r     | MOV r64, r/m64 | Move r/m64 to r64.                                |
+| REX.W + B8+ rd io | MOV r64, imm64 | Move imm64 to r64.                                |
+| B0 + rb ib        | MOV r8, imm8   | Move imm8 to r8.                                  |
+| 0F 05             | SYSCALL        | Fast call to privilege level 0 system procedures. |
+
+在查阅过程中，为了避免来回翻找的麻烦，推荐一个网站：[x86 and amd64 instruction reference](https://www.felixcloutier.com/x86/)，在 url 后面输入你要查阅的指令跳转到对应的页面即可。
 
 [^x86_reference]: Intel64 And IA-32 Architectures Software Developer's Manual Volume 2 (2A, 2B, 2C & 2D): Instruction Set Reference, A-Z.
 
